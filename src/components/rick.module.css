@@ -14,7 +14,6 @@
 }
 
 .search{
-    margin-bottom: 10px;
     background-color: #deffe6;
     width: 100%;
     max-width: 350px;
@@ -23,6 +22,7 @@
     text-align: right;
     transition: 0.3;
     background: linear-gradient(to right, #deffe6, #a0f3b3);
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
 }
 
 .search::placeholder{
@@ -31,7 +31,8 @@
 }
 
 .search:hover{
-    box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
+    box-shadow: none;
+    background-color: #47da4c;
 }
 
 .search:focus{
@@ -43,6 +44,54 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    margin-bottom: 10px;
+}
+
+.button{
+    border: 2px solid black;
+    padding: 0px 25px;
+    width: 130px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: rgb(203, 76, 203);
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
+}
+
+.button:hover{
+    background-color: #47da4c;
+    box-shadow: none;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 100%;
+     box-sizing: border-box;
+}
+
+.list .card{
+    display: flex;
+    align-items: center;
+    gap: 15%;
+    padding: 2px;
+    padding-left: 20px;
+    border-radius: 1px solid green;
+    min-height: 100px;
+}
+
+.list .card .image {
+    width: 80px;           
+    height: 80px;          
+    border-radius: 10px;
 }
 
 .card{
@@ -70,26 +119,29 @@
         grid-template-columns: repeat(2, 1fr)
     }
     .title{
-        font-size: 26px
+        font-size: 24px
     }
     .container{
-        padding: 10px; background-size: 300px
+        padding: 10px; 
+        background-size: 300px
     }
 }
 
 
 @media (max-width: 600px){
     .grid{
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        padding: 0px 180px;
     }
     .title{
-        font-size: 22px
+        font-size: 20px
     }
     .container{
-        padding: 10px; background-size: 200px
+        padding: 10px; 
+        background-size: 200px
     }
     .card{
-        padding: 10px
+        padding: 10px;
     }
     .name{
         font-size: 20px

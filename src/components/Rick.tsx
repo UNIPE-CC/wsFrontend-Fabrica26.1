@@ -14,6 +14,7 @@ export default function Rick(){
 
     const [persons, setPersons] = useState<Person[]>([])
     const [search, setSearch] = useState("")
+    const [view, setView] = useState("grid")
 
     async function getData(){
         const response = await fetch("https://rickandmortyapi.com/api/character")
@@ -39,19 +40,24 @@ export default function Rick(){
 
             <h1 className={styles.title}>Rick e Morty</h1>
             
-            <input className={styles.search} 
-                type="text" 
-                placeholder="Pesquisar"
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-            />
+            <div className={styles.bar}>
+                <input className={styles.search} 
+                    type="text" 
+                    placeholder="Pesquisar"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                />
+                <button className={styles.button} onClick={() => setView(view === "grid" ? "list" : "grid")}>
+                    {view === "grid"? "List":"Grid"}
+                </button>
+            </div>
 
-            <div className={styles.grid}>
+            <div className={view === "grid" ? styles.grid : styles.list}>
                 {filterPersons.map((person) => (
                     <div className={styles.card} key={person.id}>
                         <p className={styles.name}>{person.name}</p>
-                        <p>{person.status}</p>
-                        <p>{person.species}</p>
+                        <p>Status: {person.status}</p>
+                        <p>Espécie: {person.species}</p>
                         <img className={styles.image} src={person.image} alt={person.name} />
                     </div>
                 ))}
