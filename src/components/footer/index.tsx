@@ -6,7 +6,7 @@ export function Footer(){
         <footer className={styles.footer}>
             <div className={styles.logo}>
                 <Link href='/'>
-                    <img src="https://1000logos.net/wp-content/uploads/2022/03/Rick-and-Morty.png" alt="logo" />
+                    <img src="/images/logo.png" alt="logo" />
                 </Link>
             </div>
                 <hr />

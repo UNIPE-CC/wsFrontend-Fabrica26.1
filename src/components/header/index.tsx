@@ -6,7 +6,7 @@ export function Header(){
         <header className={styles.header}>
             <div className={styles.logo}>
                 <Link href='/'>
-                    <img src="https://1000logos.net/wp-content/uploads/2022/03/Rick-and-Morty.png" alt="logo" />
+                    <img src="/images/logo.png" alt="logo" />
                 </Link>
             </div>
             <nav className={styles.nav}>
