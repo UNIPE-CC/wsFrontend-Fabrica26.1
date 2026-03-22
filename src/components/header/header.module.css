@@ -1,0 +1,33 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    background-color: rgb(24, 246, 24);
+    color: rgb(23, 8, 43);
+    background: linear-gradient(to bottom, #0a4905, #0fd129);
+}
+
+.logo{
+    width: 200px;
+}
+
+.logo a:hover{
+    color: #661188b8;;
+}
+
+.nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav a{
+    text-decoration: none;
+    color: rgb(23, 8, 43);
+    font-weight: 500;
+}
+
+.nav a:hover{
+    color: #661188b8;;
+}

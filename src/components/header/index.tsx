@@ -1,12 +1,15 @@
 import Link from "next/link"
+import styles from "./header.module.css"
 
 export function Header(){
     return(
-        <header>
-            <div>
-                Rick e Morty
+        <header className={styles.header}>
+            <div className={styles.logo}>
+                <Link href='/'>
+                    <img src="https://1000logos.net/wp-content/uploads/2022/03/Rick-and-Morty.png" alt="logo" />
+                </Link>
             </div>
-            <nav>
+            <nav className={styles.nav}>
                 <ul>
                     <li>
                         <Link href='/'>

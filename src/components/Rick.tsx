@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import styles from "./rick.module.css"
 
 export default function Rick(){
     type Person = {
@@ -34,21 +35,27 @@ export default function Rick(){
     )
 
     return (
-        <div>
-            <h1>Personagens do Rick e Morty</h1>
-            <input type="text" 
+        <div className={styles.container}>
+
+            <h1 className={styles.title}>Personagens do Rick e Morty</h1>
+            
+            <input className={styles.search} 
+                type="text" 
                 placeholder="Pesquisar"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
             />
-            {filterPersons.map((person) => (
-                <div key={person.id}>
-                    <p>{person.name}</p>
-                    <p>{person.status}</p>
-                    <p>{person.species}</p>
-                    <img src={person.image} alt={person.name} />
-                </div>
-            ))}
+
+            <div className={styles.grid}>
+                {filterPersons.map((person) => (
+                    <div className={styles.card} key={person.id}>
+                        <p>{person.name}</p>
+                        <p>{person.status}</p>
+                        <p>{person.species}</p>
+                        <img className={styles.image} src={person.image} alt={person.name} />
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

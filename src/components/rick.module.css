@@ -1,0 +1,54 @@
+.container{
+    padding: 40px;
+    background-color: rgba(102, 17, 136, 0.722);
+    background: linear-gradient(to bottom, #d330dc, #3a0347);
+}
+
+.title{
+    font-size: 30px;
+    text-align: center;
+}
+
+.search{
+    margin-bottom: 10px;
+    background-color: #deffe6;
+    width: 350px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: right;
+    transition: 0.3;
+    background: linear-gradient(to right, #deffe6, #a0f3b3);
+}
+
+.search::placeholder{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.search:hover{
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
+}
+
+.search:focus{
+    outline: none;
+    border: 2px solid black;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.image{
+    width: 100%;
+    border-radius: 10px;
+}

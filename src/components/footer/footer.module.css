@@ -1,0 +1,19 @@
+.footer{
+    padding: 0px 40px;
+    background-color: rgb(24, 246, 24);
+    color: rgb(23, 8, 43);
+}
+
+.logo{
+    font-weight: bold;
+    width: 200px;
+}
+
+.logo a:hover{
+    color:#661188b8;
+}
+
+.copy{
+    text-align: center;
+    margin: 10px;
+}
