@@ -2,7 +2,7 @@ import Rick from "@/components/Rick"
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Home - Rick e Morty',
   description: 'Página inicial',
   openGraph:{
     title: 'API do Rick e Morty',

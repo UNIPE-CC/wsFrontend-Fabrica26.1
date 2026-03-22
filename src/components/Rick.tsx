@@ -12,11 +12,11 @@ export default function Rick(){
     }
 
     const [persons, setPersons] = useState<Person[]>([])
+    const [search, setSearch] = useState("")
 
     async function getData(){
         const response = await fetch("https://rickandmortyapi.com/api/character")
         const data = await response.json()
-        console.log(data)
 
         return data.results
     }
@@ -29,10 +29,19 @@ export default function Rick(){
         pegarDados()
     }, [])
 
+    const filterPersons = persons.filter((person) =>
+        person.name.toLowerCase().includes(search.toLowerCase())
+    )
+
     return (
         <div>
             <h1>Personagens do Rick e Morty</h1>
-            {persons.map((person) => (
+            <input type="text" 
+                placeholder="Pesquisar"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+            />
+            {filterPersons.map((person) => (
                 <div key={person.id}>
                     <p>{person.name}</p>
                     <p>{person.status}</p>
