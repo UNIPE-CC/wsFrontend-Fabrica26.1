@@ -37,7 +37,7 @@ export default function Rick(){
     return (
         <div className={styles.container}>
 
-            <h1 className={styles.title}>Personagens do Rick e Morty</h1>
+            <h1 className={styles.title}>Rick e Morty</h1>
             
             <input className={styles.search} 
                 type="text" 
@@ -49,7 +49,7 @@ export default function Rick(){
             <div className={styles.grid}>
                 {filterPersons.map((person) => (
                     <div className={styles.card} key={person.id}>
-                        <p>{person.name}</p>
+                        <p className={styles.name}>{person.name}</p>
                         <p>{person.status}</p>
                         <p>{person.species}</p>
                         <img className={styles.image} src={person.image} alt={person.name} />

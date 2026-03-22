@@ -4,8 +4,9 @@
     align-items: center;
     padding: 0px 40px;
     background-color: rgb(24, 246, 24);
-    color: rgb(23, 8, 43);
-    background: linear-gradient(to bottom, #0a4905, #0fd129);
+    color: rgb(238, 237, 240);
+    background: linear-gradient(to bottom, #e471d6, #43013e);
+    font-size: large;
 }
 
 .logo{
@@ -29,5 +30,5 @@
 }
 
 .nav a:hover{
-    color: #661188b8;;
+    color: #dbacedb8;;
 }

@@ -1,7 +1,7 @@
 .footer{
     padding: 0px 40px;
-    background-color: rgb(24, 246, 24);
     color: rgb(23, 8, 43);
+    background: linear-gradient(to top, #e471d6, #43013e);
 }
 
 .logo{
